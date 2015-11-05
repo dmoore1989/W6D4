@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cool Website</title>
+
+    <script src="../jquery-1.11.3.min.js"></script>
+    <script src="carousel.js"></script>
+    <link href="carousel.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+  <figure class="carousel">
+  <ul class="items group">
+    <img src="http://placecorgi.com/260/180" class="active" />
+    <img src="http://images.oakokho.com/_data/i/upload/2015/06/02/20150602113257-c6d17c5a-cu_e260x180.jpg" />
+    <!-- <img src="http://placecorgi.com/260/180" /> -->
+    <!-- <img src="http://images.oakokho.com/_data/i/upload/2015/06/02/20150602113257-c6d17c5a-cu_e260x180.jpg" /> -->
+    <!-- <img src="http://placecorgi.com/260/180"  /> -->
+  </ul>
+
+  <button class="slide-right">Prev</button>
+  <button class="slide-left">Next</button>
+</figure>
+
+
+    <script>
+    $(function() {
+      $(".carousel").carousel();
+    })
+  </script>
+</body>
+</html>
