@@ -1,0 +1,40 @@
+body, figure, h1, img, p, li, ul, div {
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+
+  list-style: none;
+
+}
+
+.group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.tabs .active{
+  font-weight: bolder;
+}
+
+article{
+  display: none;
+}
+
+article.transitioning {
+  display: block;
+  opacity: 0;
+
+}
+
+article.active{
+  display: block;
+  transition: opacity 1s
+}

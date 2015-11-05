@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Cool Website</title>
+
+    <script src="../jquery-1.11.3.min.js"></script>
+    <script src="tabs.js"></script>
+    <link href="tabs.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+      <ul class="tabs" data-content-tabs=".content-tabs">
+        <li><a class="active" href='#pug'>Pug</a></li>
+        <li><a href='#corgi'>Corgi</a></li>
+        <li><a href='#samoyed'>Samoyed</a></li>
+      </ul>
+
+
+    <section class="content-tabs">
+
+
+      <article class="active" id="pug">
+        <p>
+          Pugs are small dogs with big personalities. They live to love and to be loved and were bred for one reason: to be your companion. They will try to live in your lap, eat your food, and sleep on your bed. They are incredibly playful, outgoing, adaptable, happy, lively, and affectionate. They need human companionship to survive, and will not do well at all if left alone for long periods of time. Your Pug will want and need to be part of your family.
+        </p>
+      </article>
+
+      <article id="corgi">
+          <p>
+            he Cardigan Welsh Corgi equals big personality in a little dog. These are intelligent, active, alert little guys who will want to be the center of your world. They love to be with their families, and will shower you with loyalty, devotion and affection. They need daily exercise and love to take long walks with you. They are intelligent and eager to please and do great with obedience training.
+          </p>
+      </article>
+
+      <article id="samoyed">
+        <p>
+          The Samoyed is an affectionate people-dog who will want to be the center of attention. He will crave your attention and will either behave or misbehave to get it, whichever seems to work better at the time. This is an energetic, athletic, working dog who enjoys hiking, herding, weight pulling, sledding, conformation, and agility. A Samoyed needs a job to do. Early obedience training is important because if you don't establish yourself as the pack leader early on, your Samoyed will take on the role. This is an uncannily intelligent breed who thinks independently. They will learn your command quickly but they will also attach their own interpretation to it. It can be especially difficult to train this breed to walk on a lead, because these dogs were bred to pull.
+        </p>
+      </article>
+    </section>
+
+
+    <script>
+    $(function() {
+      $('.tabs').tabs();
+    })
+  </script>
+</body>
+</html>
