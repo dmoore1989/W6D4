@@ -1,4 +1,5 @@
-$.Carousel = function (el) {
+(function(){
+  $.Carousel = function (el) {
   this.$el = $(el);
   this.activeIdx = 0;
 
@@ -19,9 +20,14 @@ $.Carousel.prototype.bindEvents = function(){
 
 
 $.Carousel.prototype.slide = function (dir) {
+  if (this.transitioning){
+    return
+  }
+  this.transitioning = true
   var $pics = this.$el.find("img");
   var nextPicIdx = this.activeIdx + dir;
 
+  debugger
   if (nextPicIdx > $pics.length - 1){
     nextPicIdx = 0;
   } else if (nextPicIdx < 0) {
@@ -48,13 +54,13 @@ $.Carousel.prototype.slide = function (dir) {
       $activePic.addClass("right");
     }.bind(this), 0);
   }
-
-  $activePic.on("transitionend",function(){
+  $nextPic.one("transitionend",function(){
     $pics.removeClass("left");
     $pics.removeClass("right");
     $pics.removeClass("active");
     $nextPic.addClass("active");
     this.activeIdx = nextPicIdx;
+    this.transitioning = false;
   }.bind(this));
 
 
@@ -96,3 +102,4 @@ $.Carousel.prototype.slide = function (dir) {
   //   }.bind(this), 0);
 
 };
+}());

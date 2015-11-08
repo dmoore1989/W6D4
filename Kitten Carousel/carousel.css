@@ -36,7 +36,7 @@ body, figure, h1, img, p, li, ul, div, a {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
  img {
